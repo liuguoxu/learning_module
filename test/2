@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <time.h>
+
+
+void main()
+{
+	struct tm *timeinfo;
+
+	time_t time_now = time(NULL);
+	timeinfo = localtime(&time_now);
+
+	char tt[100];
+	strftime(tt, 80, "%Y%m%d/%H/%M", timeinfo);
+
+	printf("%s\n", tt);
+
+	char min[3]= "";
+	strncpy(min , tt+strlen(tt)- 2, 2);
+	int min_i = atoi(min);
+	printf("%02d\n", min_i);
+}
