@@ -1,4 +1,4 @@
-//模板 的用法
+//模板 function 的用法
 #include <iostream>
 
 using namespace std;
