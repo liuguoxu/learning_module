@@ -1,0 +1,37 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 123.56.230.35...
+* TCP_NODELAY set
+* Connected to dev.ikuai8.com (123.56.230.35) port 21 (#0)
+< 220 (vsFTPd 3.0.2)
+> USER ikftp
+< 331 Please specify the password.
+> PASS ikftp@Ftp!
+< 230 Login successful.
+> PWD
+< 257 "/"
+* Entry path is '/'
+> CWD 东莞debug
+* ftp_perform ends with SECONDARY: 0
+< 250 Directory successfully changed.
+> EPSV
+* Connect data stream passively
+< 229 Entering Extended Passive Mode (|||65083|).
+*   Trying 123.56.230.35...
+* TCP_NODELAY set
+* Connecting to 123.56.230.35 (123.56.230.35) port 65083
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to dev.ikuai8.com (123.56.230.35) port 21 (#0)
+> TYPE I
+< 200 Switching to Binary mode.
+> APPE test.zip.tmp
+< 150 Ok to send data.
+} [16384 bytes data]
+ 59  297k    0     0   59  176k      0   176k  0:00:01  0:00:01 --:--:-- 91160* We are completely uploaded and fine
+* Remembering we are in dir "东莞debug/"
+< 226 Transfer complete.
+> RNFR test.zip.tmp
+< 350 Ready for RNTO.
+> RNTO test.zip
+< 250 Rename successful.
+100  297k    0     0  100  297k      0   148k  0:00:02  0:00:02 --:--:--  120k
+* Connection #0 to host dev.ikuai8.com left intact
