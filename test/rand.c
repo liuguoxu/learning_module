@@ -3,13 +3,27 @@
 #include <time.h>
 #include <stdlib.h>
 
-void main()
+#define DEFAULT_SEED 9527
+
+int createRand(int max)
 {
-	time_t time_now = time(NULL);
-	srand((unsigned int)time_now);
+	static unsigned int myseed = DEFAULT_SEED;
+	printf("myseed is %d\n", myseed);
+	
+	srand(myseed);
 
 	printf("%d\n", rand());
 	
-	int a = rand()%1000;
-	printf("a %03d\n", a);
+	myseed++;
+	return rand()%max;
+}
+
+void main()
+{
+	int u = 20;
+	while(u) {
+		int x = createRand(1);
+		printf("x:%d\n", x);
+		u--;
+	}
 }
