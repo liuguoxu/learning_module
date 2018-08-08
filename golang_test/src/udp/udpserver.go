@@ -1,6 +1,9 @@
+//udp server性能测试 1 ：
+// 每次接收数据都new新的buff
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"net"
 	"time"
@@ -9,6 +12,10 @@ import (
 const (
 	server_ip = ":32145"
 )
+
+type MsgType struct {
+	MT string `json:"msgtype"`
+}
 
 func main() {
 	udp_addr, err := net.ResolveUDPAddr("udp", server_ip)
@@ -21,6 +28,8 @@ func main() {
 		panic(err)
 	}
 	fmt.Println("new conection,", conn.RemoteAddr())
+	conn.SetDeadline(time.Now().Add(time.Second * 25))
+
 	go connHandle(conn)
 
 	for {
@@ -28,18 +37,44 @@ func main() {
 	}
 }
 
+var starttime, endtime int64
+
 func connHandle(conn *net.UDPConn) {
 	defer conn.Close()
+	//defer fmt.Println(endtime)
 
-	buf := make([]byte, 65535)
+	var i int
 	for {
+		buf := make([]byte, 65535)
 		fmt.Println("keep reading...")
-		n, addr, err := conn.ReadFromUDP(buf)
+		n, _, err := conn.ReadFromUDP(buf)
 
-		if err != nil {
-			panic(err)
+		if i == 0 {
+			starttime = time.Now().Unix()
+			i++
 		}
-
-		fmt.Println("read from ", addr, "lenth ", n, "buf", string(buf))
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+		go do(buf, n)
 	}
+}
+
+func do(buf []byte, n int) {
+	fmt.Println(len(buf), cap(buf))
+	fmt.Println("read buf ", string(buf))
+
+	mt := new(MsgType)
+	err := json.Unmarshal(buf[:n], mt)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	fmt.Println(mt)
+
+	endtime = time.Now().Unix()
+
+	fmt.Println(endtime - starttime)
 }

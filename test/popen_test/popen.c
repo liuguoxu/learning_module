@@ -34,7 +34,7 @@ static char *curl_cmd = "curl -a -v --ftp-create-dirs --connect-timeout 10 -m 20
 void main()
 {
 
-	//doPopen(str);
+	doPopen("curl -s --connect-timeout 5 -k https://routers.ikuai8.com:6444/audit/ipaddess");
 	printf("curl_cmd: %s\n", curl_cmd);
 	if(doSystem(curl_cmd) != 0) {
 		rename("log.log", "tmp/log");
