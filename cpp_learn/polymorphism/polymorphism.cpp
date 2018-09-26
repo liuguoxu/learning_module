@@ -30,17 +30,27 @@ class B : public A
 };
 
 
+void pf(A &c)
+{
+	c.first();
+	c.second();
+}
+
 int main()
 {
 	A a;
 	B b;
-	a.first();
-	a.second();
+//	a.first();
+//	a.second();
 //	b.first();
 //	b.second();
 
 	A *p;
 	p = &b;
-	p->first();
-	p->second();
+	//虚函数不会被过早绑定，所以second会输出子类的结果
+//	p->first();
+//	p->second();
+
+	pf(a);
+	pf(b);
 }
