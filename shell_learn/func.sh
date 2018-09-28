@@ -1,11 +1,11 @@
 #!/bin/bash
 
 start(){
-	echo "start!"
+	echo start!
 }
 
 stop(){
-	echo "stop!"
+	echo stop!
 }
 
 $1
