@@ -33,16 +33,26 @@ class Money
 		Money operator+(const Money &m)
 		{
 			Money tmp;
-			tmp.yuan = this->yuan + m.yuan;
-			tmp.jiao = this->jiao + m.jiao;
-			tmp.fen = this->fen + m.fen;
+			int jw = 0;
+			if ((tmp.fen = this->fen + m.fen) > 10) {
+				tmp.fen -= 10;
+				jw = 1;
+			}
+
+			if((tmp.jiao = this->jiao + m.jiao + jw) > 10) {
+				tmp.jiao -= 10;
+				jw = 1;
+			} else
+				jw = 0;
+
+			tmp.yuan = this->yuan + m.yuan + jw;
 			return tmp;
 		}
 };
 
 int main()
 {
-	Money m1(3,2,1), m2(1,2,3);
+	Money m1(3,2,1), m2(1,9,3);
 	m1.show();
 	m2.show();
 	Money m3;
