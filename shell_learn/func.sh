@@ -8,13 +8,12 @@ f1() {
 }
 
 start(){
-	echo start!
-	f1 "a"
-	echo $x
+	echo $1
+	echo $2
 }
 
 stop(){
 	echo stop!
 }
 
-$1
+$*

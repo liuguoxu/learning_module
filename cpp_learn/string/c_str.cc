@@ -17,5 +17,9 @@ int main()
 
 	strcpy(ol, "123");
 	cout << str << endl;
+
+	sprintf(str, "asdfghjkl");
+
+	cout << str << endl;
 	return 0;
 }
