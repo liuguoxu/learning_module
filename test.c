@@ -4,13 +4,13 @@ char *file = "a.txt";
 
 void main()
 {
-	time_t t = 1535512062;
-	struct tm *lt;
+	char sh[128] = "abc";
+	char opt[128] = "qwe";
+	char * argv[3] = { (char*)sh, opt,  NULL};
 
-	lt = localtime(&t);
+	printf("argv0:%s, argv1:%s\n", argv[0], argv[1]);
 
-	char now[128];
-	strftime(now, 128, "%Y-%m-%d %H:%M:%S", lt);
-	printf("%s\n", now);
+	sprintf(argv[1], "%s", "zxcv");
+	printf("argv0:%s, argv1:%s\n", argv[0], argv[1]);
 }
 
