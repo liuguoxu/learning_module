@@ -1,50 +1,46 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-
-class Add {
-	protected:
-		virtual int add_func(int a, int b) {
-			cout << "I am Add" << endl;
-		}
-};
-
-class Mns {
-	protected:
-		virtual int mns_func(int a, int b) {
-			cout << "I am Mns" << endl;
-		}
-};
-
-class Calc: public Add ,public Mns{
+class House {
 	public:
-		Calc(): x(12), y(10) {}
-		Calc(int a, int b): x(a), y(b) {}
-		int add_func(int a, int b);
-		int mns_func(int a, int b);
+		House(string name = "default_house"):name_(name) {
+			cout << "I am a house my name is " << name_ << endl;
+		}
+
+		string getName() {return name_;}
 	private:
-		int x;
-		int y;
+		string name_;
 };
 
+class Wife {
+	public:
+		Wife(House h, string name = "yizhi"):h_(h), name_(name) {
+			cout << "I am wife, my house is " << h_.getName() << endl;
+		}
 
-int Calc:: add_func(int a, int b)
-{
-	return a+b;
-}
+		string getName() {return name_;}
+	private:
+		House& h_;
+		string name_;
+};
 
-int Calc:: mns_func(int a, int b)
-{
-	return a-b;
-}
+//不在初始化列表中的h_ 优先初始化，后面可用h_去初始化w_
+class Person {
+	public:
+		Person():w_(h_) {
+			cout << "I am a person, my wife is " << w_.getName()  << endl;
+		}
+		
+	private:
+		House h_;
+		Wife w_;
+};
+
 
 int main()
 {
-	Calc *tmp = new Calc;
-	cout << tmp->add_func(100, 80)<< endl;
-	cout << tmp-> mns_func(100, 80) << endl;
-
-	delete tmp;
+	Person p;
 	return 0;
 }
