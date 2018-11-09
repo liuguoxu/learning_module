@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MESSAGE>
+ <DATASET name="WA_COMMON_010017" description="" rmk="数据文件索引信息">
+  <DATA>
+   <DATASET name="WA_COMMON_010013" rmk="BCP文件描述信息">
+    <DATA>
+     <ITEM key="I010032" val="" rmk="列分隔符（缺少值时默认为制表符\t）"/>
+     <ITEM key="I010033" val="" rmk="行分隔符（缺少值时默认为换行符\n）"/>
+     <ITEM key="A010004" val="WA_SOURCE_0001" rmk="数据集代码" chn="HTTP信息"/>
+     <ITEM key="B050016" val="145" rmk="数据来源"/>
+     <ITEM key="G020013" val="" rmk="网安专用产品厂家组织机构代码"/>
+     <ITEM key="F010008" val="350503" rmk="数据采集地"/>
+     <ITEM key="I010038" val="1" rmk="数据起始行，可选项，不填写默认为第1行"/>
+     <ITEM key="I010039" val="UTF-8" rmk="可选项，默认为UTF-8，BCP文件编码格式（采用不带格式的编码方式，如：UTF-８无BOM）"/>
+     <DATASET name="WA_COMMON_010014" rmk="BCP数据文件信息">
+        <!-- 如有多个bcp文件则用多个DATA子节点 -->
+      <DATA>
+       <ITEM key="H040003" val="" rmk="文件路径" />
+       <ITEM key="H010020" val="" rmk="文件名" />
+       <ITEM key="I010034" val="5" rmk="记录行数" />
+       </DATA>
+     </DATASET>
+     <DATASET name="WA_COMMON_010015" rmk="BCP文件数据结构">
+      <DATA>
+            <ITEM idx="1" from="" required="0" key="H010005" eng="CLUE_ID" alias="" chn="线索ID/日志查询标识" />
+            <ITEM idx="2" from="" required="0" key="H010006" eng="CLUE_SRC_SYS" alias="" chn="线索布控/日志查询源" />
+            <ITEM idx="3" from="" required="0" key="H010007" eng="CLUE_DST_SYS" alias="" chn="线索布控目的地/日志产生源" />
+            <ITEM idx="4" from="config" required="1" key="B020001" eng="ISP_ID" alias="operator_net" chn="运营商标识" />
+            <ITEM idx="5" from="base" required="1" key="H010018" eng="DEVICE_ID" alias="collection_equipment_id" chn="设备ID" />
+            <ITEM idx="6" from="base" required="1" key="H010002" eng="APP_TYPE" alias="auth_type" chn="网络应用类型" />
+            <ITEM idx="7" from="event" required="0" key="F020004" eng="SRC_IP" alias="wan_ip" chn="源IPv4地址" />
+            <ITEM idx="8" from="event" required="0" key="F020010" eng="SRC_IPV6" alias="" chn="源IPv6地址" />
+            <ITEM idx="9" from="event" required="0" key="F020005" eng="DST_IP" alias="http_dst_ip" chn="目的IPv4地址" />
+            <ITEM idx="10" from="event" required="0" key="F020011" eng="DST_IPV6" alias="" chn="目的IPv6地址" />
+            <ITEM idx="11" from="event" required="0" key="F020006" eng="SRC_PORT" alias="http_src_port" chn="源IPv4端口" />
+            <ITEM idx="12" from="event" required="0" key="F020012" eng="SRC_PORT_V6" alias="" chn="源IPv6端口" />
+            <ITEM idx="13" from="event" required="0" key="F020007" eng="DST_PORT" alias="http_dst_port" chn="目的IPv4端口" />
+            <ITEM idx="14" from="event" required="0" key="F020013" eng="DST_PORT_V6" alias="" chn="目的IPv6端口" />
+            <ITEM idx="15" from="" required="0" key="H040002" eng="LOCAL_ACTION" alias="" chn="本地数据标识" />
+            <ITEM idx="16" from="base" required="1" key="C040002" eng="MAC" alias="auth_mac" chn="客户端MAC地址" />
+            <ITEM idx="17" from="event" required="1" key="H010014" eng="CAPTURE_TIME" alias="capture_time" chn="截获时间(上线时间)" />
+            <ITEM idx="18" from="base" required="1" key="B050016" eng="DATA_SOURCE" alias="data_source" chn="数据来源名称" />
+            <ITEM idx="19" from="config" required="1" key="G020014" eng="COMPANY_NAME" alias="security_software_orgname" chn="厂商名称" />
+            <ITEM idx="20" from="base" required="1" key="H010013" eng="SESSIONID" alias="sessionid" chn="会话ID（标识ID）" />
+            <ITEM idx="21" from="base" required="1" key="B040021" eng="AUTH_TYPE" alias="auth_type" chn="认证类型" />
+            <ITEM idx="22" from="base" required="1" key="B040022" eng="AUTH_ACCOUNT" alias="auth_account" chn="认证账号" />
+            <ITEM idx="23" from="base" required="1" key="B020007" eng="IMSI" alias="imsi" chn="国际移动用户标识号" />
+            <ITEM idx="24" from="base" required="1" key="C050001" eng="EQUIPMENT_ID" alias="imei" chn="设备号" />
+            <ITEM idx="25" from="" required="0" key="C040004" eng="HARDWARESTRING_TYPE" alias="" chn="硬件特征串类型" />
+            <ITEM idx="26" from="" required="0" key="C040003" eng="HARDWARE_SIGNATURE" alias="" chn="硬件特征码" />
+            <ITEM idx="27" from="" required="0" key="B030001" eng="COUNTRY_TYPE" alias="" chn="证件国家类型" />
+            <ITEM idx="28" from="base" required="0" key="B030004" eng="CERTIFICATE_TYPE" alias="certificate_type" chn="证件类型" />
+            <ITEM idx="29" from="base" required="0" key="B030005" eng="CERTIFICATE_CODE" alias="auth_account" chn="证件号码" />
+            <ITEM idx="30" from="config" required="1" key="G020004" eng="SERVICECODE" alias="netbar_wacode" chn="场所编码" />
+            <ITEM idx="31" from="config" required="1" key="F010001" eng="LONGITUDE" alias="longitude" chn="经度" />
+            <ITEM idx="32" from="config" required="1" key="F010002" eng="LATITUDE" alias="latitude" chn="纬度" />
+            <ITEM idx="33" from="" required="0" key="F010009" eng="ABOVE_SEALEVEL" alias="" chn="海拔" />
+            <ITEM idx="34" from="base" required="1" key="F030002" eng="BASE_STATION_ID" alias="collection_equipment_id" chn="基站号/AP编号" />
+            <ITEM idx="35" from="" required="0" key="B030020" eng="LANGUAGES" alias="" chn="语种" />
+            <ITEM idx="36" from="" required="0" key="B030021" eng="CHINESE_LANGUAGES" alias="" chn="中国语种" />
+            <ITEM idx="37" from="" required="0" key="H010034" eng="SENSITIVE_LEVEL" alias="" chn="敏感级别" />
+            <ITEM idx="38" from="" required="0" key="I010009" eng="CONTEXT" alias="" chn="全文数据的摘要信息" />
+            <ITEM idx="39" from="event" required="1" key="F020001" eng="CLINET_IP" alias="http_src_ip" chn="场所内网IP" />
+            <ITEM idx="40" from="config" required="1" key="B030002" eng="AREA_CODE" alias="data_src_code" chn="场所区域编码" />
+            <ITEM idx="41" from="" required="0" key="B010001" eng="NAME" alias="" chn="上网人员姓名" />
+            <ITEM idx="42" from="" required="0" key="H010031" eng="PRXOY_TOOLE_TYPE" alias="" chn="代理类型" />
+            <ITEM idx="43" from="" required="0" key="H010032" eng="PROXY_ADDRESS" alias="" chn="代理工具地址" />
+            <ITEM idx="44" from="" required="0" key="H010033" eng="PROXY_PROVIDER" alias="" chn="代理提供商" />
+            <ITEM idx="45" from="config" required="1" key="H010035" eng="OWNERSHIP_LAND" alias="data_src_code" chn="归属地" />
+            <ITEM idx="46" from="base" required="1" key="H010036" eng="INTERNET_LAND" alias="internet_land" chn="上网地" />
+            <ITEM idx="47" from="" required="0" key="H010037" eng="INTERRUPT_FILE" alias="" chn="数据截断文件名（相对描述文件的路径）" />
+            <ITEM idx="48" from="" required="0" key="F040007" eng="ROOM_ID" alias="" chn="房间号" />
+            <ITEM idx="49" from="config" required="1" key="G020013" eng="SECURITY_SOFTWARE_ORGCODE" alias="security_software_orgcode" chn="网安专用产品厂家组织机构代码" />
+            <ITEM idx="50" from="" required="0" key="F030013" eng="UP_TEID" alias="" chn="上行隧道号" />
+            <ITEM idx="51" from="" required="0" key="F030014" eng="DOWN_TEID" alias="" chn="下行隧道号" />
+            <ITEM idx="52" from="config" required="1" key="F010008" eng="COLLECT_PLACE" alias="data_src_code" chn="采集地" />
+            <ITEM idx="53" from="" required="0" key="G020036" eng="ICP_PROVIDER" alias="" chn="ICP服务提供商" />
+            <ITEM idx="54" from="config" required="1" key="F020016" eng="SRC_IP_AREA" alias="data_src_code" chn="源IP区域标识" />
+            <ITEM idx="55" from="config" required="1" key="F020017" eng="DST_IP_AREA" alias="data_src_code" chn="目的IP区域标识" />
+            <ITEM idx="56" from="" required="0" key="C020017" eng="TERMINAL_TYPE" alias="" chn="终端类型" />
+            <ITEM idx="57" from="" required="0" key="C020011" eng="TERMINAL_MODEL" alias="" chn="终端型号" />
+            <ITEM idx="58" from="" required="0" key="C020009" eng="TERMINAL_OS_TYPE" alias="" chn="终端操作系统类型" />
+            <ITEM idx="59" from="" required="0" key="C020005" eng="TERMINAL_OS_VERSION" alias="" chn="终端操作系统版本" />
+            <ITEM idx="60" from="" required="0" key="H070003" eng="TOOLTYPE" alias="" chn="工具类型" />
+            <ITEM idx="61" from="" required="0" key="C020006" eng="BROWSE_TYPE" alias="" chn=" 浏览器名称" />
+            <ITEM idx="62" from="" required="0" key="C020007" eng="BROWSE_VERSION" alias="" chn="浏览器版本" />
+            <ITEM idx="63" from="" required="0" key="C020021" eng="SOFTWARE_NAME" alias="" chn="软件名称" />
+            <ITEM idx="64" from="" required="0" key="C020022" eng="SOFTWARE_VERSION" alias="" chn="软件版本" />
+            <ITEM idx="65" from="base" required="1" key="H010041" eng="APPLICATION_LAYER_PROTOCOL" alias="application_layer_protocol" chn="应用层协议" />
+            <ITEM idx="66" from="base" required="1" key="H010042" eng="RECORD_ID" alias="sessionid" chn="记录ID" />
+            <ITEM idx="67" from="base" required="1" key="H010001" eng="HTTP_TYPE" alias="http_type" chn="网络应用代码" />
+            <ITEM idx="68" from="event" required="1" key="G010002" eng="URL" alias="report_url" chn="URL" />
+            <ITEM idx="69" from="" required="0" key="G010003" eng="HOST" alias="http_host" chn="HOST名称" />
+            <ITEM idx="70" from="" required="0" key="H020002" eng="TITLE" alias="" chn="标题" />
+            <ITEM idx="71" from="" required="0" key="G010004" eng="CONTENT_TYPE" alias="" chn="HTTP头部中的ContentType内容" />
+            <ITEM idx="72" from="" required="0" key="B040002" eng="USERNAME" alias="" chn="用户名" />
+            <ITEM idx="73" from="" required="0" key="B040003" eng="ACCOUNT_ID" alias="" chn="用户ID" />
+            <ITEM idx="74" from="" required="0" key="B040005" eng="PASSWORD" alias="" chn="密码" />
+            <ITEM idx="75" from="" required="0" key="B040014" eng="PASSWORD_HASH_STRING" alias="" chn="   密码串" />
+            <ITEM idx="76" from="" required="0" key="G010005" eng="REFERER" alias="" chn="上层页面URL" />
+            <ITEM idx="77" from="" required="0" key="H010019" eng="MAINFILE" alias="" chn="实体文件名（相对描述文件的路径）" />
+            <ITEM idx="78" from="" required="0" key="H010021" eng="FILESIZE" alias="" chn="主实体文件的大小" />
+            <ITEM idx="79" from="" required="0" key="H010028" eng="FILE_MD5" alias="" chn="主实体文件的MD5" />
+            <ITEM idx="80" from="" required="0" key="H010020" eng="OTHER_FILE" alias="" chn="其他实体文件或下行实体文件名" />
+            <ITEM idx="81" from="" required="0" key="H010038" eng="OTHER_FILE_MD5" alias="" chn="其他实体文件MD5" />
+            <ITEM idx="82" from="" required="0" key="C110008" eng="COOKIE" alias="" chn="HTTP上行数据的COOKIE" />
+      </DATA>
+     </DATASET>
+    </DATA>
+   </DATASET>
+  </DATA>
+ </DATASET>
+</MESSAGE>
