@@ -1,5 +1,5 @@
 x = 1
---table的key只能是字符串，并且不能用引号
+--用这种方式初始化table的key只能是字符串，并且不能用引号
 tab1 = {x = "val1", key2 = "val2", "val3"}
 print(tab1)
 
@@ -24,3 +24,17 @@ end
 --数字索引只能用方括号
 print(tab2[1])
 --print(tab2.1)
+
+tab3 = tab2
+
+for k,v in pairs(tab3) do
+	print(k, v)
+end
+
+tab2 = nil
+
+for k,v in pairs(tab3) do
+	print(k, v)
+end
+
+
