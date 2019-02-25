@@ -1,0 +1,62 @@
+version: '2'
+services:
+  apigw:
+    image: dockers.ikuai8.com/release/apigw:1.0.1
+    container_name: apigw
+    ports:
+     #- "18087:80"
+     - "18443:443"
+    environment:
+     - REGISTER=register
+    #depends_on:
+    # - "serviceA"
+    # - "register"
+    volumes:
+     - /ikuai/component/apigw/data:/service/data
+     - /ikuai/component/apigw/config:/service/config
+     - /ikuai/log/component/apigw:/usr/local/openresty/nginx/logs
+     - /etc/localtime:/etc/localtime:ro
+    networks:
+      - docker_audit_multihost
+    restart: always
+  register:
+    image: dockers.ikuai8.com/release/register:1.0.0
+    container_name: register
+#    ports:
+#     - "8082:80"
+    environment:
+     - MONITOR=monitor
+     - APIGW=apigw
+    #depends_on:
+    # - "serviceA"
+    volumes:
+     - /ikuai/component/register/data:/service/data
+     - /ikuai/component/register/config:/service/config
+     - /ikuai/log/component/register:/usr/local/openresty/nginx/logs
+     - /etc/localtime:/etc/localtime:ro
+    networks:
+      - docker_audit_multihost
+    restart: always
+
+  monitor:
+    image: dockers.ikuai8.com/release/monitor:1.0.0
+    container_name: monitor
+#    ports:
+#     - "8080:80"
+    environment:
+     - REGISTER=register
+     - MONITOR_NAME=tencent-cloud
+     - PHONE_REPORT_URL="https://auth.ikuai8.com/api2/sms/jawy.php?mobile=%s&message=%s"
+    #depends_on:
+    # - "serviceA"
+    volumes:
+     - /ikuai/component/monitor/data:/service/data
+     - /ikuai/component/monitor/config:/service/config
+     - /ikuai/log/component/monitor:/usr/local/openresty/nginx/logs
+     - /etc/localtime:/etc/localtime:ro
+    networks:
+      - docker_audit_multihost
+    restart: always
+networks:
+  docker_audit_multihost:
+    external: true

@@ -29,4 +29,4 @@ print("1-resume:", coroutine.resume(co, 10))
 --执行一次return后状态变为dead，dead的coroutine不能再被resume
 print("2-status:", coroutine.status(co))
 print("2-resume:", coroutine.resume(co, 10))
-
+print("3-status:", coroutine.status(co))
