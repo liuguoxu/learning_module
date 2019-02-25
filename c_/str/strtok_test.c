@@ -3,7 +3,7 @@
 
 void main()
 {
-	char str[] = "B0-5A-DA-B4-72-72,b0-89-00-31-99-18";
+	char str[] = "B0-5A-DA-B4-72-72,b0-89-00-31-99-18,sdada, 1111";
 	char *saveptr = NULL;
 
 	char *p = strtok_r(str, ",", &saveptr);
