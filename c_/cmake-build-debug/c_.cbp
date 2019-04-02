@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="c_"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="c_">
+				<Option output="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/cmake-build-debug/c_.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/dl_list"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.14.26428\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.14.26428\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 c_"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="c_/fast">
+				<Option output="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/cmake-build-debug/c_.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/dl_list"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.14.26428\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.14.26428\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 c_/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\jere\Desktop\myWork\my_github\learning_module\c_\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/array2.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/big_small_endian.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/curl.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/dl_list/dl_test.si4project/Backup/my_dl_list(334).c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/dl_list/dl_test.si4project/Backup/my_dl_list(3586).c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/dl_list/dl_test.si4project/Backup/my_dl_list(6028).c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/dl_list/list.h">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/dl_list/my_dl_list.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/dl_list/test1.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/enum_test.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/fork.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/func_ptr.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/libcurl_test/main.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/macro/macro_.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/parse_host/getaddrinfo.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/pipe/pipe.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/pipe/pipe1.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/popen/fork_exec.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/popen/proc.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/str/strdup.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/str/strtok_test.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/str_palindrome/main.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/struct.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/test.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/thread_test.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/three.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/unsigned.c">
+			<Option target="c_"/>
+		</Unit>
+		<Unit filename="C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

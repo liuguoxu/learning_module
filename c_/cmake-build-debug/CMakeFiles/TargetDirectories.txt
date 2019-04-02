@@ -1,0 +1,3 @@
+C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/cmake-build-debug/CMakeFiles/c_.dir
+C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/jere/Desktop/myWork/my_github/learning_module/c_/cmake-build-debug/CMakeFiles/rebuild_cache.dir

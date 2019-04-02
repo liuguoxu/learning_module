@@ -18,7 +18,7 @@ void main()
 
 	struct addrinfo *res, *servaddrs;
 
-	ret = getaddrinfo(host, "http", &hints, &res);
+	ret = getaddrinfo(host, "80", &hints, &res);
 
 	if (ret != 0) {
 		printf("getaddrinfo error!\n");
